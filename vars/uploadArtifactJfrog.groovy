@@ -8,7 +8,7 @@ def call(artifactPath, jarFile, authToken) {
     connection.setDoOutput(true)
 
     // Upload the file
-    def file = new jarFile
+    def file = jarFile
     connection.outputStream.withCloseable { out ->
         out.write(file.bytes)
     }
